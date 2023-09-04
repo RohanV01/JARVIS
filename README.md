@@ -1,43 +1,5 @@
-import pyttsx3
-import pyaudio
-import webbrowser
-import datetime
+**Speech Recognition**: The system employs robust speech recognition technology to accurately interpret voice input from users. It's designed to understand spoken language naturally, making it accessible to a wide range of users.
 
-def sptext():
+Jarvis Voice Command is highly customizable, allowing users to define their own set of voice commands tailored to their specific needs and preferences.
 
-    recognizer = pyaudio.Recognizer()
-    with pyaudio.Microphone() as source:
-        print("I am Listening:)")
-        recognizer.adjust_for_ambient_noise()
-        audio = recognizer.listen(source) 
-
-        try:
-            print("Recognizing")
-            audio_data = recognizer.google_recognize(audio)
-            return audio_data
-
-        except pyaudio.UnknownValueError:
-            print("Unable to understand")
-
-
-def textspeech():
-
-    engine  = pyttsx3.init()
-    voices = engine.getProperty("voices")
-    engine.setProperty("voice", voices[0])
-    rate = engine.getProperty("rate")
-    engine.setProperty("rate", 100)
-    engine.say()
-    engine.runAndWait()
-
-textspeech("Hello World!")
-
-
-if __name__ == "__main__":
-
-    #if sptext().lower() == "Jarvis" :
-        data1 = sptext().lower()
-
-        
-    #else:
-       # print("Thanks")
+ Developers can easily expand and enhance the functionality of Jarvis Voice Command by adding new features and commands. The project is designed with modularity in mind, making it easy to integrate new capabilities.
