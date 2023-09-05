@@ -37,6 +37,16 @@ if __name__ == "__main__":
 
     #if sptext().lower() == "Jarvis" :
         data1 = sptext().lower()
+    data1 = sptext().lower()
+
+        if "your name" in data1:
+             name = "My Name is Jarvis"
+
+        elif "old are you" in data1:
+             age = "I am an AI assistant, I do not have an age like humans"
+
+        elif "What is the time now" in data1:
+             time = datetime.datetime.now().strftime 
 
         
     #else:
