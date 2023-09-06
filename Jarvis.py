@@ -49,8 +49,11 @@ if __name__ == "__main__":
              textspeech(name)
 
         elif "What is the time now" in data1:
-             time = datetime.datetime.now().strftime
-             textspeech(time) 
+             time = datetime.datetime.now().strftime("%I%M%P")
+             textspeech(time)
+
+        elif "YouTube" in data1:
+             webbrowser.open("https://www.youtube.com/")
 
         
     #else:
